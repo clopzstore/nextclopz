@@ -2,6 +2,9 @@
 import fetch from "isomorphic-unfetch";
 import * as alasql from "alasql";
 import React from "react";
+export const config = {
+  runtime: 'experimental-edge',
+}
 export default class Index extends React.Component {
   static async getInitialProps() {
     const ress = await fetch(
