@@ -12,28 +12,27 @@ export default class Index extends React.Component {
     );
     const shows = await ress.json();
    // const resd = alasql("SELECT * FROM ?", [shows.records]);
-    var data = [];
+    const datas = [];
     for (var i = 0; i < shows.records.length; i++) {
-      var vall = resd[i].fields;
-      var id = resd[i].id;
+      var vall = shows.records[i].fields;
+      var id = shows.records[i].id;
       var idkategori = vall["id_kategori"];
       var namakategori = vall["nama_kategori"];
 
-      data.push({
+      datas.push({
         id: id,
         idkategori: idkategori,
         namakategori: namakategori,
       });
     }
-    return { data };
+    return { datas };
   }
   render() {
     return ( 
    <div>
-        {/*{this.props.data.map((a, index) => (
+       {this.props.datas.map((a) => (
           <div>{a.namakategori}</div>
-        ))}*/}
-        rama
+        ))} 
       </div> 
     );
   };
