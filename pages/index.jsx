@@ -8,9 +8,9 @@ import "slick-carousel/slick/slick-theme.css";
 import fetch from "isomorphic-unfetch";
 import Slider from "react-slick";
 import { NextSeo } from "next-seo";
-/*export const config = {
+ export const config = {
   runtime: "experimental-edge",
-};*/
+};
 export default class Index extends React.Component {
   static async getInitialProps() {
     const ress = await fetch(
@@ -224,7 +224,7 @@ export default class Index extends React.Component {
                       <div className="product-thumb">
                       <div className="product-thumb__image">
                         {a.poto ? a.poto.map((b) => (
-                          <img src={b.url} alt="Product image" />
+                          <img src={b.url} alt="Product image" key={b.id} />
                         )) : <img src='/image/no.png' alt="Product image" />}
                         </div>
                       </div>
