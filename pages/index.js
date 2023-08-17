@@ -1,4 +1,5 @@
-import Layout from "../components/layout"; 
+import Head from 'next/head'
+
 import fetch from "isomorphic-unfetch"; 
 import React from "react";
 export const config = {
@@ -28,11 +29,13 @@ export default class Index extends React.Component {
   }
   render() {
     return ( 
-      <Layout>
+      <>
+          <Head>
+            </Head>
        {this.props.datas.map((a) => (
           <div>{a.namakategori}</div>
         ))} 
-  	</Layout>
+  	</>
     );
   };
 };
