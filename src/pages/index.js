@@ -24,11 +24,11 @@ export default class Home extends React.Component {
   }
   render() {
     return (
-      <>
+      <div>
         {this.props.data.map((a, index) => (
           <div>{a.namakategori}</div>
         ))}
-      </>
+      </div>
     );
   };
 };
