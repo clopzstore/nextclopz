@@ -6,7 +6,7 @@ export const config = {
   runtime: 'experimental-edge',
 }
 export default class Index extends React.Component {
-  static async getInitialProps() {
+  /*static async getInitialProps() {
     const ress = await fetch(
       "https://api.airtable.com/v0/appMmICDCO6mBhZYl/kategori?api_key=keysY3XpvIdkAd38I"
     );
@@ -18,7 +18,7 @@ export default class Index extends React.Component {
       var id = resd[i].id;
       var idkategori = vall["id_kategori"];
       var namakategori = vall["nama_kategori"];
-      
+
       data.push({
         id: id,
         idkategori: idkategori,
@@ -26,13 +26,14 @@ export default class Index extends React.Component {
       });
     }
     return { data };
-  }
+  }*/
   render() {
     return ( 
    <div>
-        {this.props.data.map((a, index) => (
+        {/*{this.props.data.map((a, index) => (
           <div>{a.namakategori}</div>
-        ))}
+        ))}*/}
+        rama
       </div> 
     );
   };
