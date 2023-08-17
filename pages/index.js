@@ -5,8 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import fetch from "isomorphic-unfetch";
 import Slider from "react-slick";
 export const config = {
-  runtime: 'experimental-edge',
-}
+  runtime: "experimental-edge",
+};
 export default class Index extends React.Component {
   static async getInitialProps() {
     const ress = await fetch(
@@ -19,7 +19,7 @@ export default class Index extends React.Component {
       var id = shows.records[i].id;
       var title = vall["title"];
       var link = vall["link"];
-      var poto = vall['poto'][0]['thumbnails'].large.url;
+      var poto = vall["poto"][0]["thumbnails"].large.url;
       var subtitle = vall["subtitle"];
       datas.push({
         id: id,
@@ -47,59 +47,52 @@ export default class Index extends React.Component {
         <div className="slider -style-3 slider-arrow-middle">
           <div className="slider__carousel">
             <Slider {...settings}>
-            {this.props.datas.map((a) => (
-
-              <div className="slider__carousel__item slider-3" key={a.id}>
-                <div className="container">
-                  <div className="slider-background">
-                    <img
-                      className="slider-background"
-                      src={a.poto}
-                      alt={a.title}
-                    />
-                  </div>
-                  <div className="slider-content">
-                    <h1
-                      className="slider-content__title"
-                      data-animation-in="fadeInUp"
-                      data-animation-delay="0.2"
-                    >
-                     {a.title}
-                    </h1>
-                    <p
-                      className="slider-content__description"
-                      data-animation-in="fadeInUp"
-                      data-animation-delay="0.3"
-                    >
-                      {a.subtitle}
-                    </p>
-                    <div
-                      data-animation-in="fadeInUp"
-                      data-animation-out="fadeInDown"
-                      data-animation-delay="0.4"
-                    >
-
-{a.link ?
-                      <a
-                        className="btn -red"
-                        href={a.link}
+              {this.props.datas.map((a) => (
+                <div className="slider__carousel__item slider-3" key={a.id}>
+                  <div className="container">
+                    <div className="slider-background">
+                      <img
+                        className="slider-background"
+                        src={a.poto}
+                        alt={a.title}
+                      />
+                    </div>
+                    <div className="slider-content">
+                      <h1
+                        className="slider-content__title"
+                        data-animation-in="fadeInUp"
+                        data-animation-delay="0.2"
                       >
-                        Lihat koleksi
-                      </a>
-                      : ''
-  }
-
+                        {a.title}
+                      </h1>
+                      <p
+                        className="slider-content__description"
+                        data-animation-in="fadeInUp"
+                        data-animation-delay="0.3"
+                      >
+                        {a.subtitle}
+                      </p>
+                      <div
+                        data-animation-in="fadeInUp"
+                        data-animation-out="fadeInDown"
+                        data-animation-delay="0.4"
+                      >
+                        {a.link ? (
+                          <a className="btn -red" href={a.link}>
+                            Lihat koleksi
+                          </a>
+                        ) : (
+                          ""
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-
-))}
-
+              ))}
             </Slider>
           </div>
         </div>
       </>
     );
   }
-}
+};
