@@ -1,6 +1,6 @@
  
  
-import Headder from '../component/heads';
+import Headder from '../component/headcomponent';
 import React from "react";
  
 export default class About extends React.Component {
