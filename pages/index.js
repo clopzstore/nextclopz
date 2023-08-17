@@ -1,6 +1,7 @@
  
 import fetch from "isomorphic-unfetch"; 
-import Headder from '../component/heads';
+import Headder from '../utilities/heads';
+import Headcom from '../component/headcomponent';
 import React from "react";
 export const config = {
   runtime: 'experimental-edge',
@@ -36,6 +37,8 @@ export default class Index extends React.Component {
     	description="NextJs Head, a reliable guide for how to use it and what it's really for."
     	ogType="website"
     	/> 
+
+      <Headcom />
       <ul>
        {this.props.datas.map((a) => (
           <li key={a.id} >{a.namakategori}</li>
