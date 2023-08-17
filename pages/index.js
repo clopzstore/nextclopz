@@ -1,6 +1,5 @@
- 
-import fetch from "isomorphic-unfetch";
-//import * as alasql from "alasql";
+import Layout from "../components/layout"; 
+import fetch from "isomorphic-unfetch"; 
 import React from "react";
 export const config = {
   runtime: 'experimental-edge',
@@ -11,7 +10,7 @@ export default class Index extends React.Component {
       "https://api.airtable.com/v0/appMmICDCO6mBhZYl/kategori?api_key=keysY3XpvIdkAd38I"
     );
     const shows = await ress.json();
-   // const resd = alasql("SELECT * FROM ?", [shows.records]);
+  
     const datas = [];
     for (var i = 0; i < shows.records.length; i++) {
       var vall = shows.records[i].fields;
@@ -29,11 +28,11 @@ export default class Index extends React.Component {
   }
   render() {
     return ( 
-   <div>
+      <Layout>
        {this.props.datas.map((a) => (
           <div>{a.namakategori}</div>
         ))} 
-      </div> 
+  	</Layout>
     );
   };
 };

@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "alasql": "^4.1.4",
     "isomorphic-unfetch": "^4.0.2",
     "next": "13.4.16",
     "react": "18.2.0",
