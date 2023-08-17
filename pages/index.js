@@ -1,6 +1,6 @@
-import Head from 'next/head'
-
+ 
 import fetch from "isomorphic-unfetch"; 
+import Headder from '../component/heads';
 import React from "react";
 export const config = {
   runtime: 'experimental-edge',
@@ -11,7 +11,6 @@ export default class Index extends React.Component {
       "https://api.airtable.com/v0/appMmICDCO6mBhZYl/kategori?api_key=keysY3XpvIdkAd38I"
     );
     const shows = await ress.json();
-  
     const datas = [];
     for (var i = 0; i < shows.records.length; i++) {
       var vall = shows.records[i].fields;
@@ -30,12 +29,19 @@ export default class Index extends React.Component {
   render() {
     return ( 
       <>
-          <Head>
-            </Head>
+      <Headder
+    	canonicalUrl= ''
+    	structuredData=''
+    	title="NextJs Head"
+    	description="NextJs Head, a reliable guide for how to use it and what it's really for."
+    	ogType="website"
+    	/> 
+      <ul>
        {this.props.datas.map((a) => (
-          <div>{a.namakategori}</div>
-        ))} 
-  	</>
+          <li key={a.id} >{a.namakategori}</li>
+        ))}  
+        </ul>
+      </>
     );
   };
 };
