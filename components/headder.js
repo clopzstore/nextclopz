@@ -8,7 +8,7 @@ class Head extends Component {
                 <div className="menu__wrapper text-center">
                     <div className="navigator">
                         <a className="menu__wrapper__logo" href="/">
-                            <img src="/images/logo-white.png" alt="Logo" />
+                            <img src="/image/logo-white.png" alt="Logo" />
                         </a>
                     </div>
                 </div>

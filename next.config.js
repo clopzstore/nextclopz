@@ -2,11 +2,10 @@
 const nextConfig = {
   compress: true,
   poweredByHeader: false, 
-  experimental: {
+  reactStrictMode: true,
+  /*experimental: {
     runtime: 'experimental-edge',
   },
-  reactStrictMode: true,
-  swcMinify: true,
-}
 
-module.exports = nextConfig
+  swcMinify: true,*/
+} 
