@@ -4,9 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import fetch from "isomorphic-unfetch";
 import Slider from "react-slick";
-/*export const config = {
+export const config = {
   runtime: 'experimental-edge',
-}*/
+}
 export default class Index extends React.Component {
   static async getInitialProps() {
     const ress = await fetch(

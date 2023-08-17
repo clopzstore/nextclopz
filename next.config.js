@@ -3,9 +3,9 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false, 
   reactStrictMode: true,
-  /*experimental: {
+  experimental: {
     runtime: 'experimental-edge',
   },
 
-  swcMinify: true,*/
+  swcMinify: true,
 } 
