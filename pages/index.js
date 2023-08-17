@@ -12,7 +12,7 @@ export default class Index extends React.Component {
     );
     const shows = await ress.json();
    // const resd = alasql("SELECT * FROM ?", [shows.records]);
-    /*var data = [];
+    var data = [];
     for (var i = 0; i < shows.records.length; i++) {
       var vall = resd[i].fields;
       var id = resd[i].id;
@@ -24,8 +24,8 @@ export default class Index extends React.Component {
         idkategori: idkategori,
         namakategori: namakategori,
       });
-    }*/
-    return { shows };
+    }
+    return { data };
   }
   render() {
     return ( 
