@@ -1,3 +1,4 @@
+import Layout from "../component/layout";
 import fetch from "isomorphic-unfetch";
 import * as alasql from "alasql";
 import React from "react";
@@ -24,11 +25,13 @@ export default class Home extends React.Component {
   }
   render() {
     return (
-      <div>
+      <Layout>
+   <div>
         {this.props.data.map((a, index) => (
           <div>{a.namakategori}</div>
         ))}
       </div>
+    </Layout>
     );
   };
 };
