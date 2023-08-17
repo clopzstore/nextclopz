@@ -2,8 +2,7 @@
 import fetch from "isomorphic-unfetch";
 import * as alasql from "alasql";
 import React from "react";
-
-export default class Home extends React.Component {
+export default class Index extends React.Component {
   static async getInitialProps() {
     const ress = await fetch(
       "https://api.airtable.com/v0/appMmICDCO6mBhZYl/kategori?api_key=keysY3XpvIdkAd38I"
