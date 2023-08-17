@@ -140,7 +140,7 @@ export default class Index extends React.Component {
             description: "Toko Beragam Perlengkapan kecantikan Wanita",
             images: [
               {
-                url: "https://clopzstore.my.id/image/pic.png",
+                url: "https://clopzstore.my.id/image/pic.jpeg",
                 width: 600,
                 height: 315,
                 alt: "clopzstore",
