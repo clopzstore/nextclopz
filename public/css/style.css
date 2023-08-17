@@ -10,12 +10,30 @@ body {
   font-size: 16px;
 }
 
+.videolink {
+  position: relative;
+  display: block;
+}
+
+.videolink i.video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: rgba(255, 255, 255, .9);
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  font-size: 30px;
+  border-radius: 100px;
+  color: #5173b8;
+}
+
 @media only screen and (max-width: 992px) {
 
   html,
   body {
     font-size: 15px;
   }
+ 
 }
 
 @media only screen and (max-width: 768px) {
@@ -9903,4 +9921,22 @@ ul {
 
 .wishlist__table__wrapper table tbody tr td:last-child .remove-btn:hover {
   border-color: #6e9dfd;
+}
+
+@media only screen and (max-width: 992px) {
+ 
+
+  .product-tab__header {
+    display: block !important;
+    text-align: center;
+  }
+
+  .img-error img {
+    width: 100%;
+  }
+
+  .introduction-five { 
+    background-attachment:unset;
+  }
+  
 }
