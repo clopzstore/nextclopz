@@ -129,13 +129,12 @@ export default class Index extends React.Component {
           settings: {
             slidesToShow: 2,
           },
-        },
-        // {
-        //   breakpoint: 576,
-        //   settings: {
-        //     slidesToShow: 1,
-        //   },
-        // },
+        }, {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+         },
+         },
       ],
     };
     return (
