@@ -6,8 +6,7 @@ export default function Document() {
       <Head>
    
         <link rel="shortcut icon" type="image/png" href="/image/fav.png" />
-        <link rel="stylesheet" href="/css/bootstrap.css" />
-        <link rel="stylesheet" href="/css/fontawesome.css" />
+        <link rel="stylesheet" href="/css/core.css" />
         <link rel="stylesheet" href="/css/style.css" />
         <Script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer strategy="lazyOnload"/>
       </Head>

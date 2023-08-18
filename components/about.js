@@ -37,7 +37,7 @@ class About extends Component {
                           data-fancybox
                           className="videolink"
                         >
-                          <i className="fa fa-play video"></i>
+                          <i className="fab  fa-youtube video"></i>
                           <img
                             data-depth="0.8"
                             src="/image/img-2.png"
