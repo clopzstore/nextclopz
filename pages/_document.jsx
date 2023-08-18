@@ -1,6 +1,5 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Html, Head, NextScript } from "next/document";
 import Script from 'next/script';
-
 export default function Document() {
   return (
     <Html lang="en">
@@ -14,7 +13,7 @@ export default function Document() {
       </Head>
       <body>
       <div class="elfsight-app-eb63cfe2-444f-4aa1-b32d-0a297e3186fe"></div>
-        <Main />
+       
         <NextScript />
       </body>
     </Html>

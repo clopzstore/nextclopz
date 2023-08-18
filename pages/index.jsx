@@ -1,15 +1,18 @@
-import Headcom from "../components/headder";
-//import Aboutcom from "../components/about";
-//import Footcom from "../components/footer";
-//import Gapcom from "../components/gap";
 import React from "react"; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import fetch from "isomorphic-unfetch";
-import Slider from "react-slick";
+import fetch from "isomorphic-unfetch"; 
 import { NextSeo } from "next-seo"; 
 import dynamic from 'next/dynamic';
 const Aboutcom = dynamic(() => import('../components/about'), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
+const Headcom = dynamic(() => import('../components/headder'), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
+const Slider = dynamic(() => import('react-slick'), {
   loading: () => <p>Loading...</p>,
   ssr: false,
 });
