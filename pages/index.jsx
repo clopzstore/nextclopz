@@ -21,9 +21,9 @@ const Gapcom = dynamic(() => import('../components/gap'), {
   loading: () => <p>Loading...</p>,
   ssr: false,
 });
-export const config = {
+/*export const config = {
   runtime: "experimental-edge",
-};
+};*/
 export default class Index extends React.Component {
   static async getInitialProps() {
     
@@ -39,7 +39,7 @@ export default class Index extends React.Component {
       var id = shows.records[i].id;
       var title = vall["title"];
       var link = vall["link"];
-      var poto = vall["poto"][0]["thumbnails"].large.url;
+      var poto = vall["poto"][0].url;
       var subtitle = vall["subtitle"];
       datas.push({
         id: id,
@@ -232,7 +232,7 @@ export default class Index extends React.Component {
                       <div className="product-thumb">
                       <div className="product-thumb__image">
                         {a.poto ? a.poto.map((b) => (
-                          <img src={b.url} alt="Product image" key={b.id} width={270} height={345} />
+                          <img src={b.url} alt="Product image" key={b.id} width={308} height={394} />
                         )) : <img src='/image/no.png' alt="Product image" />}
                         </div>
                       </div>
