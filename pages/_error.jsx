@@ -5,7 +5,6 @@ import React from "react";
 import Footcom from "../components/footer";
 import { NextSeo } from "next-seo";
 export default class About extends React.Component {
-   
   render() {
     return ( 
       <>
