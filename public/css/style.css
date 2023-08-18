@@ -10,3 +10,10 @@
 .inline-svg svg {
   fill: #fff;
 }
+@media only screen and (max-width: 992px) {
+  .inline-svg {
+  
+    top: -10px;
+  }
+}
+
