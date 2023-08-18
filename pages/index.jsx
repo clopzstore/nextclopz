@@ -11,12 +11,15 @@ import { NextSeo } from "next-seo";
 import dynamic from 'next/dynamic';
 const Aboutcom = dynamic(() => import('../components/about'), {
   loading: () => <p>Loading...</p>,
+  ssr: false,
 });
 const Footcom = dynamic(() => import('../components/footer'), {
   loading: () => <p>Loading...</p>,
+  ssr: false,
 });
 const Gapcom = dynamic(() => import('../components/gap'), {
   loading: () => <p>Loading...</p>,
+  ssr: false,
 });
 export const config = {
   runtime: "experimental-edge",
