@@ -21,9 +21,9 @@ const Gapcom = dynamic(() => import('../components/gap'), {
   loading: () => <p>Loading...</p>,
   ssr: false,
 });
-/*export const config = {
+export const config = {
   runtime: "experimental-edge",
-};*/
+};
 export default class Index extends React.Component {
   static async getInitialProps() {
     
