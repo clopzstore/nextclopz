@@ -11,9 +11,10 @@ export default function Document() {
         <Script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer strategy="lazyOnload"/>
       </Head>
       <body>
+      <div class="elfsight-app-eb63cfe2-444f-4aa1-b32d-0a297e3186fe"></div>
+
         <Main />
         <NextScript />
-        <div class="elfsight-app-eb63cfe2-444f-4aa1-b32d-0a297e3186fe"></div>
       </body>
     </Html>
   );
