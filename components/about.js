@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import Fancybox from "../utilities/Fancybox";
 class About extends Component {
-    render() { 
-        return ( <div className="introduction-three">
+  render() {
+    return (
+      <div className="introduction-three">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-12 col-md-6">
               <div className="introduction-three__image">
                 <div className="introduction-three__image__background">
-                  <img
-                    src="/image/bg.png"
-                    alt="background"
-                  />
+                  <img src="/image/bg.png" alt="background" />
                 </div>
                 <div className="introduction-three__image__detail">
                   <div className="image__item">
@@ -20,6 +18,8 @@ class About extends Component {
                         data-depth="0.3"
                         src="/image/img-1.png"
                         alt="image"
+                        width={370}
+                        height={490}
                       />
                     </div>
                   </div>
@@ -35,13 +35,15 @@ class About extends Component {
                         <a
                           href="https://www.youtube.com/watch?v=KB24Tem3T9k"
                           data-fancybox
-                          className='videolink'
+                          className="videolink"
                         >
-                            <i className='fa fa-play video'></i>
+                          <i className="fa fa-play video"></i>
                           <img
                             data-depth="0.8"
                             src="/image/img-2.png"
                             alt="image"
+                            width={300}
+                            height={300}
                           />
                         </a>
                       </Fancybox>
@@ -57,10 +59,7 @@ class About extends Component {
                   Beragam Perlengkapan kecantikan <span>Wanita</span>
                 </h3>
                 <div className="more-description">
-                  <img
-                    src="/image/decoration.png"
-                    alt="Decoration"
-                  />
+                  <img src="/image/decoration.png" alt="Decoration" />
                   <span>Toko Online Pilihan Anda</span>
                 </div>
                 <p>
@@ -70,7 +69,10 @@ class About extends Component {
                   dan peralatan kecantikan yang akan membantu Anda merayakan
                   keindahan alami Anda dengan percaya diri.
                 </p>
-                <a className="btn -dark" href="https://web.facebook.com/102093058332442/shop/all_products/?ref_code=mini_shop_profile_plus_shop_tab_cta&ref_surface=mini_shop_storefront">
+                <a
+                  className="btn -dark"
+                  href="https://web.facebook.com/102093058332442/shop/all_products/?ref_code=mini_shop_profile_plus_shop_tab_cta&ref_surface=mini_shop_storefront"
+                >
                   Kunjungi Toko
                 </a>
               </div>
@@ -78,7 +80,7 @@ class About extends Component {
           </div>
         </div>
       </div>
-        );
-    }
+    );
+  }
 }
 export default About;

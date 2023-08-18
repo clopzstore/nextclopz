@@ -1,30 +1,36 @@
 import Headcom from "../components/headder";
-import Aboutcom from "../components/about";
-import Footcom from "../components/footer";
-import Gapcom from "../components/gap";
-import React from "react";
+//import Aboutcom from "../components/about";
+//import Footcom from "../components/footer";
+//import Gapcom from "../components/gap";
+import React from "react"; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import fetch from "isomorphic-unfetch";
 import Slider from "react-slick";
-import { NextSeo } from "next-seo";
- export const config = {
+import { NextSeo } from "next-seo"; 
+import dynamic from 'next/dynamic';
+const Aboutcom = dynamic(() => import('../components/about'), {
+  loading: () => <p>Loading...</p>,
+});
+const Footcom = dynamic(() => import('../components/footer'), {
+  loading: () => <p>Loading...</p>,
+});
+const Gapcom = dynamic(() => import('../components/gap'), {
+  loading: () => <p>Loading...</p>,
+});
+export const config = {
   runtime: "experimental-edge",
 };
 export default class Index extends React.Component {
   static async getInitialProps() {
-    const ress = await fetch(
-      "https://api.airtable.com/v0/appQOQbIXft6asexm/slide?api_key=keyWjSEzEwtUqENPG"
-    );
+    
+    const ress = await fetch("https://api.airtable.com/v0/appQOQbIXft6asexm/slide?api_key=keyWjSEzEwtUqENPG");
     const shows = await ress.json();
     const datas = [];
-
-    const resslide = await fetch(
-      "https://api.airtable.com/v0/appQOQbIXft6asexm/slideproduk?api_key=keyWjSEzEwtUqENPG"
-    );
+    const resslide = await fetch("https://api.airtable.com/v0/appQOQbIXft6asexm/slideproduk?api_key=keyWjSEzEwtUqENPG");
     const showslide = await resslide.json();
     const dataslide = [];
-
+  
     for (var i = 0; i < shows.records.length; i++) {
       var vall = shows.records[i].fields;
       var id = shows.records[i].id;
@@ -39,8 +45,7 @@ export default class Index extends React.Component {
         subtitle: subtitle,
         poto: poto,
       });
-    }
-
+    };
     for (var i = 0; i < showslide.records.length; i++) {
       var valls = showslide.records[i].fields;
       var id = showslide.records[i].id;
@@ -55,10 +60,9 @@ export default class Index extends React.Component {
         kategori: kategori,
         poto: poto,
       });
-    }
-    console.log(dataslide);
+    };
     return { datas, dataslide };
-  }
+  };
   render() {
     var settings = {
       dots: true,
@@ -149,7 +153,6 @@ export default class Index extends React.Component {
             site_name: "clopzstore",
           }}
         />
-
         <Headcom />
         <div className="slider -style-3 slider-arrow-middle">
           <div className="slider__carousel">
@@ -163,6 +166,8 @@ export default class Index extends React.Component {
                           className="slider-background"
                           src={a.poto}
                           alt={a.title}
+                          width={1366}
+                          height={760}
                         />
                       </div>
                       <div className="slider-content">
@@ -224,7 +229,7 @@ export default class Index extends React.Component {
                       <div className="product-thumb">
                       <div className="product-thumb__image">
                         {a.poto ? a.poto.map((b) => (
-                          <img src={b.url} alt="Product image" key={b.id} />
+                          <img src={b.url} alt="Product image" key={b.id} width={270} height={345} />
                         )) : <img src='/image/no.png' alt="Product image" />}
                         </div>
                       </div>
