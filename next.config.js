@@ -2,8 +2,7 @@
 const nextConfig = {
   compress: true, 
   poweredByHeader: false, 
-  reactStrictMode: true,  
-  output: "export",
+  reactStrictMode: true,   
   experimental: {
     runtime: 'experimental-edge',
   },

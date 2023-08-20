@@ -9,31 +9,25 @@ export default class About extends React.Component {
     return ( 
       <>
         <NextSeo
-          title="Clopzstore | Alamat url tidak di temukan "
+          title="Clopz store | Alamat url tidak di temukan "
           description="Toko Beragam Perlengkapan kecantikan Wanita"
           canonical="https://clopzstore.my.id/"
           openGraph={{
             url: "https://clopzstore.my.id/",
-            title: "Clopzstore | Alamat url tidak di temukan ",
+            title: "Clopz store | Alamat url tidak di temukan ",
             description: "Toko Beragam Perlengkapan kecantikan Wanita",
             images: [
               {
                 url: "https://clopzstore.my.id/image/pic.jpeg",
                 width: 600,
                 height: 315,
-                alt: "clopzstore",
+                alt: "clopz store",
               },
             ],
-            site_name: "clopzstore",
+            site_name: "clopz store",
           }}
         />
-      <Headder
-    	canonicalUrl= ''
-    	structuredData=''
-    	title="ABOUT"
-    	description="NextJs Head, a reliable guide for how to use it and what it's really for."
-    	ogType="website"
-    	/> 
+      <Headder/> 
       <div className='text-center img-error'>
         <img src='/image/1a.jpg'  alt='error' />
       </div>
