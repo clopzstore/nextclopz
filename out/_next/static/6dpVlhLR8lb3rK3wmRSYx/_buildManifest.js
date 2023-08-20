@@ -1,0 +1,1 @@
+self.__BUILD_MANIFEST=function(e){return{__rewrites:{afterFiles:[],beforeFiles:[],fallback:[]},"/":[e,"static/css/4df78f2cd73d6b26.css","static/chunks/pages/index-9a7ce63b9043bd9a.js"],"/_error":[e,"static/chunks/pages/_error-4c293e7ab247422e.js"],sortedPages:["/","/_app","/_error"]}}("static/chunks/962-61cc257c26437e43.js"),self.__BUILD_MANIFEST_CB&&self.__BUILD_MANIFEST_CB();
