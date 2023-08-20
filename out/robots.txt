@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://plant29.store/sitemap.xml
+Sitemap: https://clopzstore.my.id/sitemap.xml
