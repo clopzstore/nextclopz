@@ -1,27 +1,35 @@
-import React from "react"; 
+import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import fetch from "isomorphic-unfetch"; 
-import { NextSeo } from "next-seo"; 
+import fetch from "isomorphic-unfetch";  
+import { NextSeo } from "next-seo";
 import dynamic from 'next/dynamic';
 const Aboutcom = dynamic(() => import('../components/about'), {
-  loading: () => <p>Loading...</p>,
+  loading: () => <div className="load-wraper">
+    <div className="activity"></div>
+  </div>,
   ssr: false,
 });
 const Headcom = dynamic(() => import('../components/headder'), {
-  loading: () => <p>Loading...</p>,
+  loading: () => <div className="load-wraper">
+    <div className="activity"></div>
+  </div>,
   ssr: false,
 });
 const Slider = dynamic(() => import('react-slick'), {
-  loading: () => <p>Loading...</p>,
+  loading: () => '',
   ssr: false,
 });
 const Footcom = dynamic(() => import('../components/footer'), {
-  loading: () => <p>Loading...</p>,
+  loading: () => <div className="load-wraper">
+    <div className="activity"></div>
+  </div>,
   ssr: false,
 });
 const Gapcom = dynamic(() => import('../components/gap'), {
-  loading: () => <p>Loading...</p>,
+  loading: () => <div className="load-wraper">
+    <div className="activity"></div>
+  </div>,
   ssr: false,
 });
 export const config = {
@@ -29,14 +37,13 @@ export const config = {
 };
 export default class Index extends React.Component {
   static async getInitialProps() {
-    
-    const ress = await fetch("https://api.airtable.com/v0/appQOQbIXft6asexm/slide?api_key=keyWjSEzEwtUqENPG");
+
+    const ress = await fetch("https://api.airtable.com/v0/appyb6VwSElije84f/slide?api_key=keyGlbdc0CCQr8oya");
     const shows = await ress.json();
     const datas = [];
-    const resslide = await fetch("https://api.airtable.com/v0/appQOQbIXft6asexm/slideproduk?api_key=keyWjSEzEwtUqENPG");
+    const resslide = await fetch("https://api.airtable.com/v0/appyb6VwSElije84f/slideproduk?api_key=keyGlbdc0CCQr8oya");
     const showslide = await resslide.json();
     const dataslide = [];
-  
     for (var i = 0; i < shows.records.length; i++) {
       var vall = shows.records[i].fields;
       var id = shows.records[i].id;
@@ -79,7 +86,6 @@ export default class Index extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1,
     };
-
     function SampleNextArrow(props) {
       const { className, style, onClick } = props;
       return (
@@ -133,29 +139,29 @@ export default class Index extends React.Component {
           breakpoint: 576,
           settings: {
             slidesToShow: 1,
-         },
-         },
+          },
+        },
       ],
     };
     return (
       <>
         <NextSeo
-          title="Selamat Datang di clopzstore"
+          title="Selamat Datang di clopz store"
           description="Toko Beragam Perlengkapan kecantikan Wanita"
           canonical="https://clopzstore.my.id/"
           openGraph={{
             url: "https://clopzstore.my.id/",
-            title: "Selamat Datang di clopzstore",
+            title: "Selamat Datang di clopz store",
             description: "Toko Beragam Perlengkapan kecantikan Wanita",
             images: [
               {
                 url: "https://clopzstore.my.id/image/pic.jpeg",
                 width: 600,
                 height: 315,
-                alt: "clopzstore",
+                alt: "clopz store",
               },
             ],
-            site_name: "clopzstore",
+            site_name: "clopz store",
           }}
         />
         <Headcom />
@@ -212,7 +218,6 @@ export default class Index extends React.Component {
           </div>
         </div>
         <Aboutcom />
-
         <div className="product-tab-slide">
           <div className="container">
             <div className="product-tab-slide__header">
@@ -232,24 +237,24 @@ export default class Index extends React.Component {
                     <div className="product ">
                       <div className="product-type"></div>
                       <div className="product-thumb">
-                      <div className="product-thumb__image">
-                        {a.poto ? a.poto.map((b) => (
-                          <img src={b.url} alt="Product image" key={b.id} width={308} height={394} />
-                        )) : <img src='/image/no.png' alt="Product image" />}
+                        <div className="product-thumb__image">
+                          {a.poto ? a.poto.map((b) => (
+                            <img src={b.url} alt="Product image" key={b.id} width={308} />
+                          )) : <img src='/image/no.png' alt="Product image" />}
                         </div>
                       </div>
                       <div className="product-content">
                         <div className="product-content__header"></div>
                         {a.link ?
-                        <a
-                          className="product-name"
-                          href={a.link}
-                          target="_blank"
-                        >
-                          {a.title}
-                        </a> : <span   className="product-name" > {a.title}</span>
+                          <a
+                            className="product-name"
+                            href={a.link}
+                            target="_blank"
+                          >
+                            {a.title}
+                          </a> : <span className="product-name" > {a.title}</span>
 
-              }
+                        }
                         <div className="product-content__footer">
                           <h5 className="product-price--main">{a.kategori}</h5>
                         </div>
@@ -266,4 +271,4 @@ export default class Index extends React.Component {
       </>
     );
   }
-}
+};

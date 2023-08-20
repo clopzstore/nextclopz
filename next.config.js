@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  compress: true,
+  compress: true, 
   poweredByHeader: false, 
   reactStrictMode: true,  
-  output: "standalone",
+  output: "export",
   experimental: {
     runtime: 'experimental-edge',
   },
