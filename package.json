@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.22",
+    "firebase": "^10.2.0",
+    "firebase-admin": "^11.10.1",
+    "grist-api": "^0.1.7",
     "isomorphic-unfetch": "^4.0.2",
     "next": "13.4.16",
     "next-seo": "^6.1.0",
