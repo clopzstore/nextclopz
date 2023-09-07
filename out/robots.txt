@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://clopzstore.my.id/sitemap.xml
+Sitemap: https://clopz.store/sitemap.xml
